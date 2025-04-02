@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spice Haven Restaurant Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="menu-styles.css">
+</head>
+<body>
+    <div class="menu-container">
+    <br><br>
+        
+        <div class="menu-nav">
+            <a href="index.html">&larr; Back to Reservation</a>
+            <a href="#" id="saveSelections">Save Selections</a>
+        </div>
+        
+        <p>Select dishes you'd like to pre-order for your reservation. Your selections will be saved with your table booking.</p>
+        
+        <div class="menu-categories">
+            <button class="category-btn active" data-category="appetizers">Appetizers</button>
+            <button class="category-btn" data-category="mains">Main Courses</button>
+            <button class="category-btn" data-category="sides">Side Dishes</button>
+            <button class="category-btn" data-category="desserts">Desserts</button>
+            <button class="category-btn" data-category="drinks">Beverages</button>
+        </div>
+        
+        <div class="menu-items" id="menuItemsContainer">
+            <!-- Appetizers -->
+            <div class="menu-item" data-category="appetizers">
+                <h3>Spicy Samosas</h3>
+                <p>Crispy pastry filled with spiced potatoes and peas, served with tamarind chutney</p>
+                <div class="price">$8.99</div>
+                <div class="quantity-control">
+                    <button class="decrease">-</button>
+                    <input type="number" min="0" value="0" class="item-quantity">
+                    <button class="increase">+</button>
+                </div>
+                <div class="special-requests">
+                    <textarea placeholder="Special requests for this dish"></textarea>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-category="appetizers">
+                <h3>Chicken Spring Rolls</h3>
+                <p>Hand-rolled crispy spring rolls filled with minced chicken and vegetables</p>
+                <div class="price">$9.99</div>
+                <div class="quantity-control">
+                    <button class="decrease">-</button>
+                    <input type="number" min="0" value="0" class="item-quantity">
+                    <button class="increase">+</button>
+                </div>
+                <div class="special-requests">
+                    <textarea placeholder="Special requests for this dish"></textarea>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-category="appetizers">
+                <h3>Paneer Tikka</h3>
+                <p>Grilled cottage cheese cubes marinated in yogurt and spices</p>
+                <div class="price">$10.99</div>
+                <div class="quantity-control">
+                    <button class="decrease">-</button>
+                    <input type="number" min="0" value="0" class="item-quantity">
+                    <button class="increase">+</button>
+                </div>
+                <div class="special-requests">
+                    <textarea placeholder="Special requests for this dish"></textarea>
+                </div>
+            </div>
+            
+            <!-- Main Courses -->
+            <div class="menu-item" data-category="mains">
+                <h3>Butter Chicken</h3>
+                <p>Tender chicken cooked in a rich, creamy tomato sauce</p>
+                <div class="price">$16.99</div>
+                <div class="quantity-control">
+                    <button class="decrease">-</button>
+                    <input type="number" min="0" value="0" class="item-quantity">
+                    <button class="increase">+</button>
+                </div>
+                <div class="special-requests">
+                    <textarea placeholder="Special requests for this dish"></textarea>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-category="mains">
+                <h3>Vegetable Biryani</h3>
+                <p>Fragrant basmati rice cooked with mixed vegetables and aromatic spices</p>
+                <div class="price">$14.99</div>
+                <div class="quantity-control">
+                    <button class="decrease">-</button>
+                    <input type="number" min="0" value="0" class="item-quantity">
+                    <button class="increase">+</button>
+                </div>
+                <div class="special-requests">
+                    <textarea placeholder="Special requests for this dish"></textarea>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-category="mains">
+                <h3>Lamb Rogan Josh</h3>
+                <p>Slow-cooked lamb in a rich sauce with Kashmiri chili and aromatic spices</p>
+                <div class="price">$18.99</div>
+                <div class="quantity-control">
+                    <button class="decrease">-</button>
+                    <input type="number" min="0" value="0" class="item-quantity">
+                    <button class="increase">+</button>
+                </div>
+                <div class="special-requests">
+                    <textarea placeholder="Special requests for this dish"></textarea>
+                </div>
+            </div>
+            
+            <!-- Side Dishes -->
+            <div class="menu-item" data-category="sides">
+                <h3>Garlic Naan</h3>
+                <p>Soft flatbread topped with garlic butter</p>
+                <div class="price">$3.99</div>
+                <div class="quantity-control">
+                    <button class="decrease">-</button>
+                    <input type="number" min="0" value="0" class="item-quantity">
+                    <button class="increase">+</button>
+                </div>
+                <div class="special-requests">
+                    <textarea placeholder="Special requests for this dish"></textarea>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-category="sides">
+                <h3>Steamed Basmati Rice</h3>
+                <p>Fragrant long-grain basmati rice</p>
+                <div class="price">$2.99</div>
+                <div class="quantity-control">
+                    <button class="decrease">-</button>
+                    <input type="number" min="0" value="0" class="item-quantity">
+                    <button class="increase">+</button>
+                </div>
+                <div class="special-requests">
+                    <textarea placeholder="Special requests for this dish"></textarea>
+                </div>
+            </div>
+            
+            <!-- Desserts -->
+            <div class="menu-item" data-category="desserts">
+                <h3>Gulab Jamun</h3>
+                <p>Sweet milk dumplings soaked in rose-scented syrup</p>
+                <div class="price">$5.99</div>
+                <div class="quantity-control">
+                    <button class="decrease">-</button>
+                    <input type="number" min="0" value="0" class="item-quantity">
+                    <button class="increase">+</button>
+                </div>
+                <div class="special-requests">
+                    <textarea placeholder="Special requests for this dish"></textarea>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-category="desserts">
+                <h3>Mango Kulfi</h3>
+                <p>Traditional Indian ice cream flavored with mango and cardamom</p>
+                <div class="price">$6.99</div>
+                <div class="quantity-control">
+                    <button class="decrease">-</button>
+                    <input type="number" min="0" value="0" class="item-quantity">
+                    <button class="increase">+</button>
+                </div>
+                <div class="special-requests">
+                    <textarea placeholder="Special requests for this dish"></textarea>
+                </div>
+            </div>
+            
+            <!-- Beverages -->
+            <div class="menu-item" data-category="drinks">
+                <h3>Mango Lassi</h3>
+                <p>Refreshing yogurt drink blended with mango and a hint of cardamom</p>
+                <div class="price">$4.99</div>
+                <div class="quantity-control">
+                    <button class="decrease">-</button>
+                    <input type="number" min="0" value="0" class="item-quantity">
+                    <button class="increase">+</button>
+                </div>
+                <div class="special-requests">
+                    <textarea placeholder="Special requests for this dish"></textarea>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-category="drinks">
+                <h3>Masala Chai</h3>
+                <p>Traditional spiced tea brewed with milk</p>
+                <div class="price">$3.99</div>
+                <div class="quantity-control">
+                    <button class="decrease">-</button>
+                    <input type="number" min="0" value="0" class="item-quantity">
+                    <button class="increase">+</button>
+                </div>
+                <div class="special-requests">
+                    <textarea placeholder="Special requests for this dish"></textarea>
+                </div>
+            </div>
+        </div>
+        
+        <div class="order-summary">
+            <h2>Your Order</h2>
+            <div id="selectedItems" class="selected-items">
+                <p id="emptySelection">No items selected yet.</p>
+            </div>
+            <div class="total-price">Total: $<span id="totalPrice">0.00</span></div>
+            <button id="addToReservation" class="add-to-reservation">Add to Reservation</button>
+        </div>
+    </div>
+    
+    <script src="menu-script.js"></script>
+</body>
+</html>

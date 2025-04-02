@@ -1,0 +1,198 @@
+body {
+    font-family: 'Arial', sans-serif;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2eeec;
+    color: #151414;
+}
+
+h1 {
+    text-align: center;
+    color: #8B4513;
+    margin-bottom: 30px;
+}
+
+.layout-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.floor-plan {
+    flex: 1;
+    min-width: 500px;
+    background-color: #11b6bf;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant-map {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin: 30px 0;
+    position: relative;
+}
+
+.table {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #cf1619;
+    cursor: pointer;
+    user-select: none;
+    background-color:WHITE;
+    border-radius: 8px;
+    font-weight: bold;
+    position: relative;
+}
+
+.round-table {
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+}
+.large-table {
+    width: 160px;
+    height: 90px;
+    grid-column: span 2;
+}
+
+.table-capacity {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 10px;
+    background-color: rgba(139, 69, 19, 0.1);
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.table:hover {
+    background-color: #6ff363;
+}
+
+.table.selected {
+    background-color: #3a942e;
+    color: white;
+    border-color: #3a942e;
+}
+
+.table.reserved {
+    background-color: #e62e19;
+    color: white;
+    cursor: not-allowed;
+    border-color: #8B0000;
+}
+
+.legend {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.legend-box {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+.reservation-form {
+    flex: 1;
+    min-width: 300px;
+    background-color: #11b6bf;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+button {
+    background-color: #e62e19;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 0;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #e94c4a;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.booking-summary {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.table-info {
+    font-style: italic;
+    color: #666;
+    margin: 3px 0;
+    font-size: 14px;
+}
+.menu-link {
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    border: 1px dashed #8B4513;
+}
+
+.book-dish-link {
+    color: #8B4513;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 5px;
+}
+
+.book-dish-link:hover {
+    color: #e62e19;
+    text-decoration: underline;
+}
