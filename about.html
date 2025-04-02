@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Spice Haven</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: rgba(0, 0, 0, 0.8);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+        
+        nav a:hover {
+            background-color: #e67e22;
+            transform: translateY(-3px);
+        }
+        
+        /* Header Section */
+        .header {
+            height: 50vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+        
+        .header-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.7);
+        }
+        
+        .header-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%);
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 100;
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+        }
+        
+        .header-title {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+        }
+        
+        /* About Content */
+        .about-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #333;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 4px;
+            background-color: #e67e22;
+        }
+        
+        .about-text p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #555;
+        }
+        
+        /* Team Section */
+        .team-section {
+            background-color: #f1f1f1;
+            padding: 80px 20px;
+        }
+        
+        .team-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .team-title {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            text-align: center;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .team-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 60px;
+            height: 4px;
+            background-color: #e67e22;
+            transform: translateX(-50%);
+        }
+        
+        .team-members {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .team-member {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 280px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .member-img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+        
+        .member-info {
+            padding: 20px;
+        }
+        
+        .member-name {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        .member-role {
+            font-size: 1rem;
+            color: #e67e22;
+            margin-bottom: 15px;
+        }
+        
+        .member-bio {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        /* Social Media */
+        .social-section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .social-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .social-title {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .social-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            transform: translateY(-10px);
+        }
+        
+        .social-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #e67e22;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            color: white;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover .social-icon {
+            background-color: #d35400;
+        }
+        
+        .social-name {
+            font-weight: 500;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #fff;
+            padding: 50px 20px 20px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .copyright {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animated {
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                padding: 15px 0;
+                flex-wrap: wrap;
+            }
+            
+            nav a {
+                padding: 8px 15px;
+                margin: 5px;
+                font-size: 0.9rem;
+            }
+            
+            .header-title {
+                font-size: 2.5rem;
+            }
+            
+            .section-title, .team-title {
+                font-size: 2rem;
+            }
+            
+            .about-text, .about-image {
+                flex: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu2.html">Menu</a>
+        <a href="book.html">Reservations</a>
+        <a href="feedback.html">Feedback</a>
+    </nav>
+    
+    <header class="header">
+        <img src="/api/placeholder/1920/1080" alt="Spice Haven Interior" class="header-image">
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <h1 class="header-title">Our Story</h1>
+        </div>
+    </header>
+    
+    <section class="about-section animated">
+        <div class="about-text">
+            <h2 class="section-title">About Spice Haven</h2>
+            <p>Founded in 2025, Spice Haven began with a simple vision: to create a dining experience that celebrates the rich tapestry of global flavors while maintaining the warmth of home-cooked meals.</p>
+            <p>What started as a small family-owned establishment has grown into a beloved culinary destination in our community. Our journey has been fueled by a passion for authentic flavors, time-honored recipes, and the joy of bringing people together around exceptional food.</p>
+            <p>At Spice Haven, we believe that every meal tells a story. Our chefs meticulously source the finest ingredients and spices from around the world to create dishes that honor traditional cooking methods while embracing contemporary culinary innovations.</p>
+            <p>We take pride in creating a welcoming atmosphere where friends and families can gather, create memories, and experience the magic that happens when exceptional food meets genuine hospitality.</p>
+        </div>
+        <div class="about-image">
+            <img src="Homepage.jpeg" alt="Our Restaurant">
+        </div>
+    </section>
+    
+    <section class="team-section">
+        <div class="team-container animated">
+            <h2 class="team-title">Meet Our Team</h2>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="rohan.jpeg" alt="Chef Name" class="member-img">
+                    <div class="member-info">
+                        <h3 class="member-name">Rohan K Shine</h3>
+                        <p class="member-role">Head Chef</p>
+                        <p class="member-bio">With over 10 years of experience in international cuisine, Chef Rohan brings authentic flavors from around the world to our kitchen.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="tino.jpeg" alt="Manager Name" class="member-img">
+                    <div class="member-info">
+                        <h3 class="member-name">Tino Sabu</h3>
+                        <p class="member-role">Restaurant Manager</p>
+                        <p class="member-bio">Tino ensures that every guest at Spice Haven receives exceptional service and an unforgettable dining experience.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="roshan.jpeg" alt="Owner Name" class="member-img">
+                    <div class="member-info">
+                        <h3 class="member-name">Roshan Subhash </h3>
+                        <p class="member-role">Founder</p>
+                        <p class="member-bio">Roshan established Spice Haven with a vision to share their love for global cuisine with the community.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="Vishnu.jpeg" alt="Owner Name" class="member-img">
+                    <div class="member-info">
+                        <h3 class="member-name">Vishnunadh</h3>
+                        <p class="member-role">Major Stakeholder</p>
+                        <p class="member-bio">Vishnu has been the pivotal element who helped our startup venture and his accurate decision making coupled up with his open mindedness has led us to where we are right now.</p>
+                    </div> 
+            </div>
+        </div>
+    </section>
+    
+    <section class="social-section animated">
+        <div class="social-container">
+            <h2 class="social-title">Connect With Us</h2>
+            <p>Follow us on social media for the latest updates, special offers, and behind-the-scenes glimpses of Spice Haven.</p>
+            <div class="social-links">
+                <a href="https://facebook.com" target="_blank" class="social-link">
+                    <div class="social-icon">f</div>
+                    <span class="social-name">Facebook</span>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="social-link">
+                    <div class="social-icon">in</div>
+                    <span class="social-name">Instagram</span>
+                </a>
+                <a href="https://twitter.com" target="_blank" class="social-link">
+                    <div class="social-icon">t</div>
+                    <span class="social-name">Twitter</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-content">
+            <p>Spice Haven | 123 Flavor Street | (555) 123-4567</p>
+            <p>Open Monday - Saturday: 11am - 10pm | Sunday: 12pm - 9pm</p>
+            <p class="copyright">© 2025 Spice Haven. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
